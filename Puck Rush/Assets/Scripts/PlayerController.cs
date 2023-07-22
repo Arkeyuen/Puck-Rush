@@ -6,12 +6,18 @@ public class PlayerController : MonoBehaviour
     [SerializeField] private float puckNormalspeed = 5f;
     [SerializeField] private float puckCurrentSpeed;
     [SerializeField] private float deceleration = 1f;
+
     [Header("Booster Settings")]
     [SerializeField] private float puckBoostSpeed = 10f;
     [SerializeField] private float boostTime = 1f;
 
+    [Header("Rotation Settings")]
+    [SerializeField] private float rotationSpeed = 10f;
+
     private float boostTimer = 0f;
     private bool boosting = false;
+    private Vector3 _rotation = Vector3.up;
+
 
     private void Start()
     {
@@ -20,6 +26,7 @@ public class PlayerController : MonoBehaviour
 
     void Update()
     {
+
         // Check if the left mouse button is pressed.
         if (Input.GetMouseButtonDown(0))
         {
@@ -28,7 +35,8 @@ public class PlayerController : MonoBehaviour
         }
 
         // Move the puck forward at its current speed.
-        transform.Translate(0, 0, puckCurrentSpeed * Time.deltaTime);
+        //transform.Translate(0, 0, puckCurrentSpeed * Time.deltaTime);
+        transform.position += transform.forward * puckCurrentSpeed * Time.deltaTime;
 
         // Decelerate the puck over time.
         if (!boosting)
@@ -52,5 +60,16 @@ public class PlayerController : MonoBehaviour
                 boosting = false;
             }
         }
+
+        if (Input.GetKey(KeyCode.A))
+        {
+            transform.Rotate(-_rotation * rotationSpeed * Time.deltaTime);
+        }
+
+        if (Input.GetKey(KeyCode.D))
+        {
+            transform.Rotate(_rotation * rotationSpeed * Time.deltaTime);
+        }
     }
+
 }

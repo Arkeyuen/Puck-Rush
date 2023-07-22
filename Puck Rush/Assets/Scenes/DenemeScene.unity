@@ -756,6 +756,7 @@ MonoBehaviour:
   deceleration: 1
   puckBoostSpeed: 10
   boostTime: 2
+  rotationSpeed: 50
 --- !u!4 &5762274013640868772
 Transform:
   m_ObjectHideFlags: 0
