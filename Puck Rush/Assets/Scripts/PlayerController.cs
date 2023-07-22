@@ -2,35 +2,24 @@ using UnityEngine;
 
 public class PlayerController : MonoBehaviour
 {
-    [Header("Movement")]
-    Rigidbody rb;
-    [SerializeField] float movementSpeed;
-    [SerializeField] float jumpForce;
+    public float speed;
+    public float deceleration;
 
-    [Header("Ground")]
-    [SerializeField] Transform groundCheck;
-    [SerializeField] LayerMask ground;
-
-    private void Start()
+    void Update()
     {
-        rb = GetComponent<Rigidbody>();
-    }
-
-    private void Update()
-    {
-        float horizontalInput = Input.GetAxis("Horizontal"); // Oyuncu saða sola kontrolü
-        float verticalInput = 1f; // Karakterin otomatik olarak ileri doðru koþmasý
-
-        rb.velocity = new Vector3(horizontalInput * movementSpeed, rb.velocity.y, verticalInput * movementSpeed);
-
-        if (Input.GetButtonDown("Jump") && IsGrounded()) // Jump'a basar ve yerde ise
+        // Check if the left mouse button is pressed.
+        if (Input.GetMouseButtonDown(0))
         {
-            rb.velocity = new Vector3(rb.velocity.x, jumpForce, rb.velocity.z);
+            // Move the puck forward at its current speed.
+            this.transform.Translate(0, 0, speed);
         }
-    }
+        // Decelerate the puck over time.
+        speed -= deceleration * Time.deltaTime;
 
-    bool IsGrounded()
-    {
-        return Physics.CheckSphere(groundCheck.position, .1f, ground);
+        // If the puck's speed is below a certain threshold, stop it.
+        if (speed < 0.1f)
+        {
+            speed = 0.0f;
+        }
     }
 }
