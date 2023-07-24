@@ -7,7 +7,7 @@ public class PlayerController : MonoBehaviour
     [Header("Puck Settings")]
     [SerializeField] private float puckNormalspeed = 5f;
     [SerializeField] private float puckCurrentSpeed;
-    [SerializeField] private float deceleration = 1f;
+    [SerializeField] private float deceleration = 1f; //oyuncu da fren yapabilsin
     [SerializeField] private float jumpForce = 5f;
     [SerializeField] Transform groundCheck;
     [SerializeField] LayerMask ground;
@@ -56,7 +56,7 @@ public class PlayerController : MonoBehaviour
         transform.position += transform.forward * puckCurrentSpeed * Time.deltaTime;
 
         // Decelerate the puck over time on ground.
-        if (!boosting && !isJumping)
+        if (!boosting && !isJumping) //oyuncu boostlarken sürtünme etkilesin.
         {
             puckCurrentSpeed -= deceleration * Time.deltaTime;
         }
