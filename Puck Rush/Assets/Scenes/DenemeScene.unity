@@ -38,7 +38,7 @@ RenderSettings:
   m_ReflectionIntensity: 1
   m_CustomReflection: {fileID: 0}
   m_Sun: {fileID: 0}
-  m_IndirectSpecularColor: {r: 0.18028352, g: 0.22571376, b: 0.3069224, a: 1}
+  m_IndirectSpecularColor: {r: 0.18028378, g: 0.22571412, b: 0.30692285, a: 1}
   m_UseRadianceAmbientProbe: 0
 --- !u!157 &3
 LightmapSettings:
@@ -305,8 +305,8 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 610898979}
   serializedVersion: 2
-  m_LocalRotation: {x: 0.2297529, y: 0, z: 0, w: 0.973249}
-  m_LocalPosition: {x: 0, y: 1.22535, z: -9.6}
+  m_LocalRotation: {x: 0.32693833, y: -0.000000022996261, z: 0.00000000795555, w: 0.9450457}
+  m_LocalPosition: {x: 0, y: 4.89535, z: -13.68}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children:
@@ -669,8 +669,8 @@ MonoBehaviour:
   m_ScreenY: 0.5
   m_DeadZoneWidth: 0
   m_DeadZoneHeight: 0
-  m_SoftZoneWidth: 0.8
-  m_SoftZoneHeight: 0.8
+  m_SoftZoneWidth: 0.36
+  m_SoftZoneHeight: 0.36
   m_BiasX: 0
   m_BiasY: 0
   m_CenterOnActivate: 1
@@ -695,21 +695,19 @@ MonoBehaviour:
   m_GameObject: {fileID: 2027279270}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: bd6043bde05a7fc4cba197d06915c1e3, type: 3}
+  m_Script: {fileID: 11500000, guid: fa7155796051b734daa718462081dc5f, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  Damping: {x: 0.1, y: 0.5, z: 0.3}
-  ShoulderOffset: {x: 0, y: 0.41, z: 1}
-  VerticalArmLength: 0.4
-  CameraSide: 1
-  CameraDistance: 2.62
-  CameraCollisionFilter:
-    serializedVersion: 2
-    m_Bits: 0
-  IgnoreTag: 
-  CameraRadius: 0.2
-  DampingIntoCollision: 0
-  DampingFromCollision: 2
+  m_BindingMode: 1
+  m_FollowOffset: {x: 0, y: 4.48, z: -5.7}
+  m_XDamping: 1.1
+  m_YDamping: 1
+  m_ZDamping: 1
+  m_AngularDampingMode: 0
+  m_PitchDamping: 0
+  m_YawDamping: 0
+  m_RollDamping: 0
+  m_AngularDamping: 0
 --- !u!20 &1300881547205622340
 Camera:
   m_ObjectHideFlags: 0
@@ -1030,8 +1028,8 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 8917911672744762700}
   serializedVersion: 2
-  m_LocalRotation: {x: 0.2297529, y: 0, z: 0, w: 0.973249}
-  m_LocalPosition: {x: 0, y: 1.22535, z: -9.6}
+  m_LocalRotation: {x: 0.32693833, y: -0.000000022996261, z: 0.00000000795555, w: 0.9450457}
+  m_LocalPosition: {x: 0, y: 4.89535, z: -13.68}
   m_LocalScale: {x: 0.43431, y: 0.3593822, z: 0.44788742}
   m_ConstrainProportionsScale: 0
   m_Children: []
