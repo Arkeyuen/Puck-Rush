@@ -35,7 +35,6 @@ public class PlayerController : MonoBehaviour
         }
 
         // Move the puck forward at its current speed.
-        //transform.Translate(0, 0, puckCurrentSpeed * Time.deltaTime);
         transform.position += transform.forward * puckCurrentSpeed * Time.deltaTime;
 
         // Decelerate the puck over time.
@@ -61,15 +60,23 @@ public class PlayerController : MonoBehaviour
             }
         }
 
-        if (Input.GetKey(KeyCode.A))
+        if (puckCurrentSpeed == 0 && Input.GetMouseButtonDown(1))
+            Debug.Log("spawned");
+
+        else
         {
-            transform.Rotate(-_rotation * rotationSpeed * Time.deltaTime);
+            if (puckCurrentSpeed > 0 && Input.GetKey(KeyCode.A))
+            {
+                transform.Rotate(-_rotation * rotationSpeed * Time.deltaTime);
+            }
+
+            if (puckCurrentSpeed > 0 && Input.GetKey(KeyCode.D))
+            {
+                transform.Rotate(_rotation * rotationSpeed * Time.deltaTime);
+            }
         }
 
-        if (Input.GetKey(KeyCode.D))
-        {
-            transform.Rotate(_rotation * rotationSpeed * Time.deltaTime);
-        }
+        
     }
 
 }
