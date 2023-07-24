@@ -82,12 +82,12 @@ public class PlayerController : MonoBehaviour
 
         else
         {
-            if (puckCurrentSpeed > 0 && Input.GetKey(KeyCode.A))
+            if (puckCurrentSpeed > 0 && Input.GetKey(KeyCode.A) && !isJumping)
             {
                 transform.Rotate(-_rotation * rotationSpeed * Time.deltaTime);
             }
 
-            if (puckCurrentSpeed > 0 && Input.GetKey(KeyCode.D))
+            if (puckCurrentSpeed > 0 && Input.GetKey(KeyCode.D) && !isJumping)
             {
                 transform.Rotate(_rotation * rotationSpeed * Time.deltaTime);
             }
