@@ -11,7 +11,7 @@ public class PlayerController : MonoBehaviour
     [SerializeField] private float jumpForce = 5f;
     [SerializeField] Transform groundCheck;
     [SerializeField] LayerMask ground;
-    public bool isJumping = false; //hava sürtünmesi eklenecek
+    public bool isJumping = false; //
     //duruyorsa zýplayamasýn
 
     [Header("Booster Settings")]
