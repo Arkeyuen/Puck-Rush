@@ -305,7 +305,7 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 610898979}
   serializedVersion: 2
-  m_LocalRotation: {x: 0.32693833, y: 0.00000002299627, z: -0.000000007955553, w: 0.9450457}
+  m_LocalRotation: {x: 0.32693833, y: -0.000000022996261, z: 0.00000000795555, w: 0.9450457}
   m_LocalPosition: {x: 0, y: 4.89535, z: -13.68}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
@@ -396,6 +396,37 @@ MeshFilter:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 923860799}
   m_Mesh: {fileID: 10207, guid: 0000000000000000e000000000000000, type: 0}
+--- !u!1 &1708342004
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 1708342005}
+  m_Layer: 0
+  m_Name: groundCheck
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &1708342005
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1708342004}
+  serializedVersion: 2
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 0, y: -1, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_ConstrainProportionsScale: 0
+  m_Children: []
+  m_Father: {fileID: 5762274013640868772}
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &2027279270
 GameObject:
   m_ObjectHideFlags: 3
@@ -764,6 +795,12 @@ MonoBehaviour:
   puckNormalspeed: 5
   puckCurrentSpeed: 0
   deceleration: 1
+  jumpForce: 5
+  groundCheck: {fileID: 1708342005}
+  ground:
+    serializedVersion: 2
+    m_Bits: 8
+  isJumping: 0
   puckBoostSpeed: 10
   boostTime: 2
   rotationSpeed: 50
@@ -781,6 +818,7 @@ Transform:
   m_ConstrainProportionsScale: 0
   m_Children:
   - {fileID: 923860800}
+  - {fileID: 1708342005}
   m_Father: {fileID: 0}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!33 &6655902032039910024
@@ -841,7 +879,7 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 8917911672744762700}
   serializedVersion: 2
-  m_LocalRotation: {x: 0.32693833, y: 0.00000002299627, z: -0.000000007955553, w: 0.9450457}
+  m_LocalRotation: {x: 0.32693833, y: -0.000000022996261, z: 0.00000000795555, w: 0.9450457}
   m_LocalPosition: {x: 0, y: 4.89535, z: -13.68}
   m_LocalScale: {x: 0.43431, y: 0.3593822, z: 0.44788742}
   m_ConstrainProportionsScale: 0
@@ -860,8 +898,8 @@ GameObject:
   - component: {fileID: 6655902032039910024}
   - component: {fileID: 7707169661199938261}
   - component: {fileID: 4349432381226587304}
-  - component: {fileID: 5630629752486296609}
   - component: {fileID: 7757959972236640676}
+  - component: {fileID: 5630629752486296609}
   m_Layer: 0
   m_Name: Player
   m_TagString: Untagged

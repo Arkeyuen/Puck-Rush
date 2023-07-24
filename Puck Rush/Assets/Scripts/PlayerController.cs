@@ -2,10 +2,16 @@ using UnityEngine;
 
 public class PlayerController : MonoBehaviour
 {
+    Rigidbody rb;
+
     [Header("Puck Settings")]
     [SerializeField] private float puckNormalspeed = 5f;
     [SerializeField] private float puckCurrentSpeed;
     [SerializeField] private float deceleration = 1f;
+    [SerializeField] private float jumpForce = 5f;
+    [SerializeField] Transform groundCheck;
+    [SerializeField] LayerMask ground;
+    public bool isJumping = false;
 
     [Header("Booster Settings")]
     [SerializeField] private float puckBoostSpeed = 10f;
@@ -21,6 +27,7 @@ public class PlayerController : MonoBehaviour
 
     private void Start()
     {
+        rb = GetComponent<Rigidbody>();
         boosting = false;
     }
 
@@ -34,11 +41,21 @@ public class PlayerController : MonoBehaviour
             puckCurrentSpeed = puckBoostSpeed;
         }
 
+        if (!IsGrounded())
+        {
+            isJumping = true;
+        }
+
+        if (Input.GetKey(KeyCode.Space) && IsGrounded())
+        {
+            rb.velocity = new Vector3(rb.velocity.x, jumpForce, rb.velocity.z); 
+        }
+
         // Move the puck forward at its current speed.
         transform.position += transform.forward * puckCurrentSpeed * Time.deltaTime;
 
         // Decelerate the puck over time.
-        if (!boosting)
+        if (!boosting && !isJumping)
         {
             puckCurrentSpeed -= deceleration * Time.deltaTime;
         }
@@ -76,7 +93,13 @@ public class PlayerController : MonoBehaviour
             }
         }
 
-        
+
+    }
+
+    bool IsGrounded()
+    {
+        isJumping = false;
+        return Physics.CheckSphere(groundCheck.position, .1f, ground); 
     }
 
 }
