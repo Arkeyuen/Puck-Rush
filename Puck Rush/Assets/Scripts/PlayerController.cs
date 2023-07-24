@@ -11,7 +11,8 @@ public class PlayerController : MonoBehaviour
     [SerializeField] private float jumpForce = 5f;
     [SerializeField] Transform groundCheck;
     [SerializeField] LayerMask ground;
-    public bool isJumping = false;
+    public bool isJumping = false; //hava sürtünmesi eklenecek
+    //duruyorsa zýplayamasýn
 
     [Header("Booster Settings")]
     [SerializeField] private float puckBoostSpeed = 10f;
@@ -54,7 +55,7 @@ public class PlayerController : MonoBehaviour
         // Move the puck forward at its current speed.
         transform.position += transform.forward * puckCurrentSpeed * Time.deltaTime;
 
-        // Decelerate the puck over time.
+        // Decelerate the puck over time on ground.
         if (!boosting && !isJumping)
         {
             puckCurrentSpeed -= deceleration * Time.deltaTime;
