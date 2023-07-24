@@ -11,7 +11,7 @@ public class PlayerController : MonoBehaviour
     [SerializeField] private float jumpForce = 5f;
     [SerializeField] Transform groundCheck;
     [SerializeField] LayerMask ground;
-    public bool isJumping = false; //
+    public bool isJumping = false; //oyuncuya sýnýrlý sayýda verilecek
     //duruyorsa zýplayamasýn
 
     [Header("Booster Settings")]
@@ -34,8 +34,8 @@ public class PlayerController : MonoBehaviour
 
     void Update()
     {
-
-        // Check if the left mouse button is pressed.
+        //level baþýnda otomatik fýrlatýlacak.
+        // Check if the left mouse button is pressed.//oyuncuya sýnýrlý sayýda verilecek
         if (Input.GetMouseButtonDown(0))
         {
             boosting = true;
