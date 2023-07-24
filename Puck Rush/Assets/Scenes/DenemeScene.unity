@@ -38,7 +38,7 @@ RenderSettings:
   m_ReflectionIntensity: 1
   m_CustomReflection: {fileID: 0}
   m_Sun: {fileID: 0}
-  m_IndirectSpecularColor: {r: 0.18028352, g: 0.22571376, b: 0.3069224, a: 1}
+  m_IndirectSpecularColor: {r: 0.18028378, g: 0.22571412, b: 0.30692285, a: 1}
   m_UseRadianceAmbientProbe: 0
 --- !u!157 &3
 LightmapSettings:
@@ -305,12 +305,56 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 610898979}
   serializedVersion: 2
-  m_LocalRotation: {x: 0.32693833, y: -0.000000022996261, z: 0.00000000795555, w: 0.9450457}
+  m_LocalRotation: {x: 0.32693833, y: 0.00000002299627, z: -0.000000007955553, w: 0.9450457}
   m_LocalPosition: {x: 0, y: 4.89535, z: -13.68}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children:
   - {fileID: 2027279271}
+  m_Father: {fileID: 0}
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!1 &1588801880
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 1588801882}
+  - component: {fileID: 1588801881}
+  m_Layer: 0
+  m_Name: Game Manager
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!114 &1588801881
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1588801880}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 5cac7798e6aea21489aca4ec7df5f53b, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+--- !u!4 &1588801882
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1588801880}
+  serializedVersion: 2
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_ConstrainProportionsScale: 0
+  m_Children: []
   m_Father: {fileID: 0}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &2027279270
@@ -593,6 +637,11 @@ PrefabInstance:
     serializedVersion: 3
     m_TransformParent: {fileID: 0}
     m_Modifications:
+    - target: {fileID: 2389971995219514708, guid: b020a09119f79b94fa0842470c7134ce,
+        type: 3}
+      propertyPath: m_Enabled
+      value: 0
+      objectReference: {fileID: 0}
     - target: {fileID: 5621186801097855681, guid: b020a09119f79b94fa0842470c7134ce,
         type: 3}
       propertyPath: m_LocalPosition.x
@@ -651,8 +700,44 @@ PrefabInstance:
     m_RemovedComponents: []
     m_RemovedGameObjects: []
     m_AddedGameObjects: []
-    m_AddedComponents: []
+    m_AddedComponents:
+    - targetCorrespondingSourceObject: {fileID: 8398971072997268455, guid: b020a09119f79b94fa0842470c7134ce,
+        type: 3}
+      insertIndex: -1
+      addedObject: {fileID: 7466816485654825984}
   m_SourcePrefab: {fileID: 100100000, guid: b020a09119f79b94fa0842470c7134ce, type: 3}
+--- !u!1 &7466816485654825983 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 8398971072997268455, guid: b020a09119f79b94fa0842470c7134ce,
+    type: 3}
+  m_PrefabInstance: {fileID: 7466816485654825982}
+  m_PrefabAsset: {fileID: 0}
+--- !u!114 &7466816485654825984
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 7466816485654825983}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: fb439985b59262b42aeb64636523f373, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  puckNormalspeed: 5
+  puckCurrentSpeed: 0
+  deceleration: 1
+  rotationSpeed: 10
+  jumpForce: 5
+  groundCheck: {fileID: 0}
+  ground:
+    serializedVersion: 2
+    m_Bits: 0
+  isJumping: 0
+  puckBoostSpeed: 10
+  puckBoostTime: 1
+  startBoostSpeed: 10
+  startboostTime: 1
 --- !u!4 &7711849004486064151
 Transform:
   m_ObjectHideFlags: 0
@@ -661,7 +746,7 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 8917911672744762700}
   serializedVersion: 2
-  m_LocalRotation: {x: 0.32693833, y: -0.000000022996261, z: 0.00000000795555, w: 0.9450457}
+  m_LocalRotation: {x: 0.32693833, y: 0.00000002299627, z: -0.000000007955553, w: 0.9450457}
   m_LocalPosition: {x: 0, y: 4.89535, z: -13.68}
   m_LocalScale: {x: 0.43431, y: 0.3593822, z: 0.44788742}
   m_ConstrainProportionsScale: 0
@@ -731,3 +816,4 @@ SceneRoots:
   - {fileID: 610898981}
   - {fileID: 7466816485654825982}
   - {fileID: 4842788039761407558}
+  - {fileID: 1588801882}
