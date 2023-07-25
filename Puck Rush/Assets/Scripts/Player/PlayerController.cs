@@ -5,7 +5,7 @@ using UnityEngine;
 
 public class PlayerController : MonoBehaviour
 {
-    public static PlayerController instance;
+   /* public static PlayerController instance;
 
     private bool canMove;
     private bool canJump;
@@ -14,8 +14,8 @@ public class PlayerController : MonoBehaviour
 
 
     [Header("Puck Forward Move Settings")]
-    [SerializeField] private float puckNormalspeed = 5f;
-    [SerializeField] private float puckCurrentSpeed;
+    [SerializeField] public float puckNormalspeed = 5f;
+    [SerializeField] public float puckCurrentSpeed;
 
     [Header("Puck Deceleration Speed")]
     [SerializeField] private float autoDeceleration = 1f; // zemin sürtünmesi 
@@ -38,6 +38,8 @@ public class PlayerController : MonoBehaviour
     [Header("Puck Booster Settings")]
     [SerializeField] private float puckBoostSpeed = 10f;
     [SerializeField] private float puckBoostTime = 1f;
+    //[SerializeField] private float maxBoost = 3f;
+    //private float maxBoostUsage;
     private bool canPuckBoosting;
 
     [Header("Start Booster Settings")]
@@ -65,6 +67,7 @@ public class PlayerController : MonoBehaviour
         canStartBoosting = false;
         canJump = false;
         canPuckBoosting = false;
+        //maxBoost = 0f;
     }
 
     private void OnDestroy()
@@ -91,19 +94,13 @@ public class PlayerController : MonoBehaviour
             if (GameManager.Instance.IsGameState())
             {
                 canPuckBoosting = true;
-                /*if (maxTotalBoost < TotalBoostUsage)
+                if (canPuckBoosting)
                 {
-                    canPuckBoosting = false;
+                    puckCurrentSpeed += puckBoostSpeed;
+                    //maxBoostUsage++;
+                    // Debug.Log(maxBoostUsage);
                 }
-                else
-                {
-                    canPuckBoosting = true;
-
-                }*/
-
-                puckCurrentSpeed += puckBoostSpeed;
             }
-
             else
             {
                 canStartBoosting = true;
@@ -111,20 +108,10 @@ public class PlayerController : MonoBehaviour
                 puckCurrentSpeed = startBoostSpeed;
 
             }
-
         }
         if (Input.GetKeyDown(KeyCode.Space))
         {
             canJump = true;
-            /*if (maxTotalJump < TotalJumpUsage)
-            {
-                canJump = false;
-            }
-            else
-            {
-                canJump = true;
-
-            }*/
         }
 
         if (!IsGrounded())
@@ -240,8 +227,8 @@ public class PlayerController : MonoBehaviour
         {
             if (GameManager.Instance.IsGameState())
                 GameManager.Instance.SetGameState(GameManager.GameState.GameOver);
-            /*if (GameManager.Instance.IsThisGameState(GameManager.GameState.GameOver)) bu kod hareketi bitiricek
-                return;*/
+            if (GameManager.Instance.IsThisGameState(GameManager.GameState.GameOver)) bu kod hareketi bitiricek
+                return;
             puckCurrentSpeed = 0.0f;
 
         }
@@ -269,4 +256,5 @@ public class PlayerController : MonoBehaviour
         canMove = false;
         //PlayerAnimator.Idle();
     }
+*/
 }

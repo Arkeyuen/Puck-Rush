@@ -455,12 +455,6 @@ Transform:
     type: 3}
   m_PrefabInstance: {fileID: 419581167}
   m_PrefabAsset: {fileID: 0}
---- !u!4 &751625638 stripped
-Transform:
-  m_CorrespondingSourceObject: {fileID: 3493376562055699456, guid: b020a09119f79b94fa0842470c7134ce,
-    type: 3}
-  m_PrefabInstance: {fileID: 7466816485654825982}
-  m_PrefabAsset: {fileID: 0}
 --- !u!4 &837891911 stripped
 Transform:
   m_CorrespondingSourceObject: {fileID: 5824085539718223677, guid: 2611c4c6d831db34e9006eab3e785c41,
@@ -805,11 +799,6 @@ PrefabInstance:
     serializedVersion: 3
     m_TransformParent: {fileID: 0}
     m_Modifications:
-    - target: {fileID: 2389971995219514708, guid: b020a09119f79b94fa0842470c7134ce,
-        type: 3}
-      propertyPath: m_Enabled
-      value: 0
-      objectReference: {fileID: 0}
     - target: {fileID: 5621186801097855681, guid: b020a09119f79b94fa0842470c7134ce,
         type: 3}
       propertyPath: m_LocalPosition.x
@@ -865,49 +854,26 @@ PrefabInstance:
       propertyPath: m_Name
       value: Player
       objectReference: {fileID: 0}
+    - target: {fileID: 8861535858706804106, guid: b020a09119f79b94fa0842470c7134ce,
+        type: 3}
+      propertyPath: maxJumpUsage
+      value: 3
+      objectReference: {fileID: 0}
+    - target: {fileID: 8861535858706804106, guid: b020a09119f79b94fa0842470c7134ce,
+        type: 3}
+      propertyPath: startBoostTime
+      value: 2
+      objectReference: {fileID: 0}
+    - target: {fileID: 8861535858706804106, guid: b020a09119f79b94fa0842470c7134ce,
+        type: 3}
+      propertyPath: puckNormalSpeed
+      value: 5
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
     m_AddedGameObjects: []
-    m_AddedComponents:
-    - targetCorrespondingSourceObject: {fileID: 8398971072997268455, guid: b020a09119f79b94fa0842470c7134ce,
-        type: 3}
-      insertIndex: -1
-      addedObject: {fileID: 7466816485654825984}
+    m_AddedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: b020a09119f79b94fa0842470c7134ce, type: 3}
---- !u!1 &7466816485654825983 stripped
-GameObject:
-  m_CorrespondingSourceObject: {fileID: 8398971072997268455, guid: b020a09119f79b94fa0842470c7134ce,
-    type: 3}
-  m_PrefabInstance: {fileID: 7466816485654825982}
-  m_PrefabAsset: {fileID: 0}
---- !u!114 &7466816485654825984
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 7466816485654825983}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: fb439985b59262b42aeb64636523f373, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  puckNormalspeed: 10
-  puckCurrentSpeed: 0
-  autoDeceleration: 1
-  playerDeceleration: 3
-  rotationSpeed: 50
-  jumpForce: 5
-  maxTotalJump: 3
-  groundCheck: {fileID: 751625638}
-  ground:
-    serializedVersion: 2
-    m_Bits: 8
-  puckBoostSpeed: 15
-  puckBoostTime: 1
-  maxTotalBoost: 3
-  startBoostSpeed: 10
-  startBoostTime: 2
 --- !u!4 &7711849004486064151
 Transform:
   m_ObjectHideFlags: 0

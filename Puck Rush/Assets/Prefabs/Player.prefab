@@ -127,7 +127,7 @@ GameObject:
   - component: {fileID: 8535566691439952327}
   - component: {fileID: 5007343016513001338}
   - component: {fileID: 451748391146800797}
-  - component: {fileID: 2389971995219514708}
+  - component: {fileID: 8861535858706804106}
   m_Layer: 0
   m_Name: Player
   m_TagString: Untagged
@@ -251,7 +251,7 @@ Rigidbody:
   m_Interpolate: 0
   m_Constraints: 112
   m_CollisionDetection: 0
---- !u!114 &2389971995219514708
+--- !u!114 &8861535858706804106
 MonoBehaviour:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
@@ -260,18 +260,16 @@ MonoBehaviour:
   m_GameObject: {fileID: 8398971072997268455}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 8196b83e075d15b4e91269f69fe85d87, type: 3}
+  m_Script: {fileID: 11500000, guid: 386b2939d9a55444ead4031cd5b88cb4, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  puckNormalspeed: 10
+  puckNormalSpeed: 20
   puckCurrentSpeed: 0
-  deceleration: 1
+  autoDeceleration: 1
+  playerBreake: 1
+  rotationSpeed: 50
   jumpForce: 5
   groundCheck: {fileID: 3493376562055699456}
   ground:
     serializedVersion: 2
     m_Bits: 8
-  isJumping: 0
-  puckBoostSpeed: 20
-  boostTime: 2
-  rotationSpeed: 50
