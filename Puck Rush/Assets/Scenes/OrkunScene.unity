@@ -1037,6 +1037,9 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   cylinderSize: 0.2
   cylindersInRow: 5
+  explosionForce: 100
+  explosionRadius: 4
+  explosionUpward: 0.4
 --- !u!65 &5762274013640868774
 BoxCollider:
   m_ObjectHideFlags: 0
