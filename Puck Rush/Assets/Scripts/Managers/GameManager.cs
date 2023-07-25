@@ -11,7 +11,7 @@ public class GameManager : MonoBehaviour
 
     private GameState gameState;
 
-    public static Action<GameState> OnGameStateChanged;
+    public static Action<GameState> onGameStateChanged;
 
     private void Awake()
     {
@@ -24,7 +24,7 @@ public class GameManager : MonoBehaviour
     public void SetGameState(GameState gameState)
     {
         this.gameState = gameState;
-        OnGameStateChanged?.Invoke(gameState);
+        onGameStateChanged?.Invoke(gameState);
 
         Debug.Log("Game State changed to : " + gameState);
     }
@@ -32,5 +32,10 @@ public class GameManager : MonoBehaviour
     public bool IsGameState()
     {
         return gameState == GameState.Game;
+    }
+
+    public bool IsThisGameState(GameState GameState)
+    {
+        return gameState == GameState;
     }
 }
