@@ -201,8 +201,8 @@ Transform:
   m_GameObject: {fileID: 68608550}
   serializedVersion: 2
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 8.12, y: 0.37, z: 26.23}
-  m_LocalScale: {x: 15.558, y: 10.168242, z: 4.6528}
+  m_LocalPosition: {x: 8.12, y: 0.82, z: 26.23}
+  m_LocalScale: {x: 15.558, y: 1.339666, z: 4.6528}
   m_ConstrainProportionsScale: 0
   m_Children: []
   m_Father: {fileID: 0}
@@ -226,7 +226,7 @@ BoxCollider:
   m_ProvidesContacts: 0
   m_Enabled: 1
   serializedVersion: 3
-  m_Size: {x: 1, y: 1, z: 1}
+  m_Size: {x: 1, y: 1.57, z: 1}
   m_Center: {x: 0, y: 0, z: 0}
 --- !u!1 &410087039
 GameObject:
@@ -1210,6 +1210,12 @@ Transform:
     type: 3}
   m_PrefabInstance: {fileID: 7466816485654825982}
   m_PrefabAsset: {fileID: 0}
+--- !u!54 &5762274013640868775 stripped
+Rigidbody:
+  m_CorrespondingSourceObject: {fileID: 451748391146800797, guid: b020a09119f79b94fa0842470c7134ce,
+    type: 3}
+  m_PrefabInstance: {fileID: 7466816485654825982}
+  m_PrefabAsset: {fileID: 0}
 --- !u!1001 &7466816485654825982
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -1218,6 +1224,21 @@ PrefabInstance:
     serializedVersion: 3
     m_TransformParent: {fileID: 0}
     m_Modifications:
+    - target: {fileID: 451748391146800797, guid: b020a09119f79b94fa0842470c7134ce,
+        type: 3}
+      propertyPath: m_CollisionDetection
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 1980619576444455960, guid: b020a09119f79b94fa0842470c7134ce,
+        type: 3}
+      propertyPath: rb
+      value: 
+      objectReference: {fileID: 5762274013640868775}
+    - target: {fileID: 5007343016513001338, guid: b020a09119f79b94fa0842470c7134ce,
+        type: 3}
+      propertyPath: m_Convex
+      value: 1
+      objectReference: {fileID: 0}
     - target: {fileID: 5007343016513001338, guid: b020a09119f79b94fa0842470c7134ce,
         type: 3}
       propertyPath: m_IsTrigger
@@ -1277,6 +1298,21 @@ PrefabInstance:
         type: 3}
       propertyPath: m_Name
       value: Player
+      objectReference: {fileID: 0}
+    - target: {fileID: 8861535858706804106, guid: b020a09119f79b94fa0842470c7134ce,
+        type: 3}
+      propertyPath: puckNormalSpeed
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 8861535858706804106, guid: b020a09119f79b94fa0842470c7134ce,
+        type: 3}
+      propertyPath: startBoostSpeed
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 8861535858706804106, guid: b020a09119f79b94fa0842470c7134ce,
+        type: 3}
+      propertyPath: puckGameBoostSpeed
+      value: 1
       objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []

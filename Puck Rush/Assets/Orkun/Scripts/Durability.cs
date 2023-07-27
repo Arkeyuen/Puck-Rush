@@ -4,5 +4,8 @@ using UnityEngine;
 
 public class Durability : MonoBehaviour
 {
-    //soft wall a çarpýnca az kýrýk model gelecek
+    //soft wall a çarpýnca çatlak model gelecek
+    //hard wall a çarpýnca kýrýk model gelecek
+
+    
 }
