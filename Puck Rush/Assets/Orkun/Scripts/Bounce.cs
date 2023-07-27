@@ -7,9 +7,14 @@ public class Bounce : MonoBehaviour
     public float turnSpeed = 5f;
     private bool isTurning = false;
     private Quaternion targetRotation;
+    private int softWallCounter = 0;
 
     private void Update()
     {
+        if (softWallCounter == 2)
+        {
+            PuckController.StopAll();
+        }
         if (isTurning)
         {
             // Oyuncunun yavaþça dönmesi için rotasyonu yumuþat
@@ -28,6 +33,7 @@ public class Bounce : MonoBehaviour
         // Eðer çarpýþma duvarla gerçekleþtiyse
         if (collision.gameObject.CompareTag("SoftWall"))
         {
+            softWallCounter++;
             // Oyuncunun yüzüne çarpan duvarýn normal vektörünü al
             Vector3 wallNormal = collision.contacts[0].normal;
 
@@ -49,6 +55,10 @@ public class Bounce : MonoBehaviour
 
             // Dönme iþlemini baþlat
             isTurning = true;
+        }
+        if (collision.gameObject.CompareTag("HardWall"))
+        {
+            PuckController.StopAll();
         }
     }
 }
