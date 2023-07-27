@@ -4,7 +4,6 @@ using UnityEngine;
 
 public class PuckController : MonoBehaviour
 {
-
     [Header("Forward Move Settings")]
     [SerializeField] private float puckNormalSpeed = 5f;
     [SerializeField] private float puckCurrentSpeed;
@@ -60,8 +59,7 @@ public class PuckController : MonoBehaviour
 
         //StartBoosting();
 
-        GameBoosting();
-
+        GameBoosting();//cooldown olsun //boost basarken duvarýn içinden geçip düþüyor
     }
 
     private void StartBoosting()
@@ -135,10 +133,10 @@ public class PuckController : MonoBehaviour
             DecreaseSpeed(autoDeceleration);
         }
 
-        StopPunk();
+        StopPuck();
     }
 
-    private void StopPunk()
+    private void StopPuck()
     {
         if (puckCurrentSpeed < 0.1f)
         {
@@ -174,5 +172,10 @@ public class PuckController : MonoBehaviour
     {
         isJumping = false;
         return Physics.CheckSphere(groundCheck.position, .1f, ground);
+    }
+
+    public static void StopAll()
+    {
+        //Her þey duracak.
     }
 }
