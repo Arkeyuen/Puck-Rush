@@ -19,7 +19,7 @@ public class PuckController : MonoBehaviour
     [Header("Start Boost Settings")]
     [SerializeField] private float startBoostSpeed = 10f;
     [SerializeField] private float startBoostTime = 2f;
-    private bool isStartBoosting = false;
+    //private bool isStartBoosting = false;
     private bool canStartBoosting = false;
     private float boostTimer = 0f;
 
@@ -127,8 +127,8 @@ public class PuckController : MonoBehaviour
     private void MoveForward()
     {
         // Move the puck forward at its current speed.
-        //transform.position += transform.forward * puckCurrentSpeed * Time.deltaTime;
-        rb.AddForce(transform.forward*puckCurrentSpeed, ForceMode.VelocityChange);
+        transform.position += transform.forward * puckCurrentSpeed * Time.deltaTime;
+        //rb.AddForce(transform.forward*puckCurrentSpeed, ForceMode.VelocityChange); //böyle duvara çarpabiliyor
         if (!isJumping)
         {
             DecreaseSpeed(autoDeceleration);
