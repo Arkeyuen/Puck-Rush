@@ -241,7 +241,7 @@ GameObject:
   - component: {fileID: 182118424}
   - component: {fileID: 182118423}
   m_Layer: 0
-  m_Name: hard wall (1)
+  m_Name: soft wall
   m_TagString: SoftWall
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -515,7 +515,7 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 610898979}
   serializedVersion: 2
-  m_LocalRotation: {x: 0.32693833, y: -0.000000022996261, z: 0.00000000795555, w: 0.9450457}
+  m_LocalRotation: {x: 0.32693833, y: -0.000000022996266, z: 0.000000007955552, w: 0.9450457}
   m_LocalPosition: {x: 0, y: 4.89535, z: -13.68}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
@@ -1210,12 +1210,6 @@ Transform:
     type: 3}
   m_PrefabInstance: {fileID: 7466816485654825982}
   m_PrefabAsset: {fileID: 0}
---- !u!54 &5762274013640868775 stripped
-Rigidbody:
-  m_CorrespondingSourceObject: {fileID: 451748391146800797, guid: b020a09119f79b94fa0842470c7134ce,
-    type: 3}
-  m_PrefabInstance: {fileID: 7466816485654825982}
-  m_PrefabAsset: {fileID: 0}
 --- !u!1001 &7466816485654825982
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -1224,26 +1218,6 @@ PrefabInstance:
     serializedVersion: 3
     m_TransformParent: {fileID: 0}
     m_Modifications:
-    - target: {fileID: 451748391146800797, guid: b020a09119f79b94fa0842470c7134ce,
-        type: 3}
-      propertyPath: m_CollisionDetection
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 1980619576444455960, guid: b020a09119f79b94fa0842470c7134ce,
-        type: 3}
-      propertyPath: rb
-      value: 
-      objectReference: {fileID: 5762274013640868775}
-    - target: {fileID: 5007343016513001338, guid: b020a09119f79b94fa0842470c7134ce,
-        type: 3}
-      propertyPath: m_Convex
-      value: 1
-      objectReference: {fileID: 0}
-    - target: {fileID: 5007343016513001338, guid: b020a09119f79b94fa0842470c7134ce,
-        type: 3}
-      propertyPath: m_IsTrigger
-      value: 0
-      objectReference: {fileID: 0}
     - target: {fileID: 5621186801097855681, guid: b020a09119f79b94fa0842470c7134ce,
         type: 3}
       propertyPath: m_LocalPosition.x
@@ -1299,26 +1273,6 @@ PrefabInstance:
       propertyPath: m_Name
       value: Player
       objectReference: {fileID: 0}
-    - target: {fileID: 8861535858706804106, guid: b020a09119f79b94fa0842470c7134ce,
-        type: 3}
-      propertyPath: puckNormalSpeed
-      value: 10
-      objectReference: {fileID: 0}
-    - target: {fileID: 8861535858706804106, guid: b020a09119f79b94fa0842470c7134ce,
-        type: 3}
-      propertyPath: startBoostSpeed
-      value: 10
-      objectReference: {fileID: 0}
-    - target: {fileID: 8861535858706804106, guid: b020a09119f79b94fa0842470c7134ce,
-        type: 3}
-      propertyPath: autoDeceleration
-      value: 1
-      objectReference: {fileID: 0}
-    - target: {fileID: 8861535858706804106, guid: b020a09119f79b94fa0842470c7134ce,
-        type: 3}
-      propertyPath: puckGameBoostSpeed
-      value: 10
-      objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
     m_AddedGameObjects: []
@@ -1332,7 +1286,7 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 8917911672744762700}
   serializedVersion: 2
-  m_LocalRotation: {x: 0.32693833, y: -0.000000022996261, z: 0.00000000795555, w: 0.9450457}
+  m_LocalRotation: {x: 0.32693833, y: -0.000000022996266, z: 0.000000007955552, w: 0.9450457}
   m_LocalPosition: {x: 0, y: 4.89535, z: -13.68}
   m_LocalScale: {x: 0.43431, y: 0.3593822, z: 0.44788742}
   m_ConstrainProportionsScale: 0
