@@ -128,7 +128,7 @@ public class PuckController : MonoBehaviour
     {
         // Move the puck forward at its current speed.
         //transform.position += transform.forward * puckCurrentSpeed * Time.deltaTime;
-        rb.AddForce(transform.forward*puckCurrentSpeed, ForceMode.VelocityChange); //böyle duvara çarpabiliyor
+        rb.AddForce(transform.forward * puckCurrentSpeed, ForceMode.VelocityChange); //böyle duvara çarpabiliyor
         if (!isJumping)
         {
             DecreaseSpeed(autoDeceleration);
